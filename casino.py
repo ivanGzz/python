@@ -34,11 +34,11 @@ for i in range(len(results)):
   acc = acc + math.pow(results[i] - avg, 2)
 std = math.sqrt(acc / exp)
 
-results = {
+result = {
     'overall': {
         'metric': 'Average',
         'value': avg
     }
 }
 
-empirical.postResults(results)
+empirical.postResults(result)
