@@ -1,5 +1,6 @@
 import random
 import math
+import empirical
 
 limit = 10000
 exp = 10000
@@ -26,7 +27,6 @@ for i in range(exp):
     count = count + 1
   acc = acc + max_amount
   results.append(max_amount)
-  print "Exp {}".format(i)
 
 avg = acc / exp
 acc = 0
@@ -34,4 +34,11 @@ for i in range(len(results)):
   acc = acc + math.pow(results[i] - avg, 2)
 std = math.sqrt(acc / exp)
 
-print "Average max amount earned {} with standard deviation {}".format(avg, std)
+results = {
+    'overall': {
+        'metric': 'Average',
+        'value': avg
+    }
+}
+
+empirical.postResults(results)

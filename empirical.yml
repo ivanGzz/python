@@ -1,0 +1,6 @@
+# empirical.yml
+experiments:
+    casino-nigzz:
+        type: standalone
+        environment:
+            build: .
