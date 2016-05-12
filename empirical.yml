@@ -1,6 +1,6 @@
 # empirical.yml
 experiments:
-    casino-nigzz:
+    python:
         type: standalone
         environment:
             build: .
